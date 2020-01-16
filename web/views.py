@@ -17,14 +17,17 @@ def get_coders(request):
         for coder in coderObj:
             coderList.append({
                 "name":coder.username,
+                "phone":coder.phone,
             })
         data = {
             "coder": coderList,
-            "msg":"success"
+            "msg":"success",
+            "errorNum":0,
         }
     except  Exception as e:
         data = {
             "msg":str(e),
-            "coder":[]
+            "coder":[],
+            "errorNum":1
         }
     return HttpResponse(json.dumps(data), content_type="application/json")
