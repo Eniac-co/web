@@ -2,11 +2,11 @@
   <div class="home">
     <el-row>
         <el-table :data="coderList" style="width: 100%" border>
-          <el-table-column prop="id" label="id" min-width="100">
-            <template scope="scope"> {{ scope.row.pk }} </template>
+          <el-table-column prop="name" label="username" min-width="100">
+            <template scope="scope"> {{ scope.row.name }} </template>
           </el-table-column>
-          <el-table-column prop="username" label="username" min-width="100">
-            <template scope="scope"> {{ scope.row.fields.username }} </template>
+          <el-table-column prop="phone" label="id" min-width="100">
+            <template scope="scope"> {{ scope.row.phone }} </template>
           </el-table-column>
         </el-table>
     </el-row>
@@ -19,24 +19,25 @@ export default {
   data () {
     return {
       input: '',
-      coderList: [],
+      coderList: []
     }
   },
-  mounted: function() {
-      this.showCoders()
+  mounted: function () {
+    this.showCoders()
   },
   methods: {
-    showCoders(){
-      this.$http.get('http://127.0.0.1:8000/api/show_Coders')
+    showCoders () {
+      this.$http.get('http://127.0.0.1:8000/api/showCoders')
         .then((response) => {
-            var res = JSON.parse(response.bodyText)
-            console.log(res)
-            if (res.error_num == 0) {
-              this.coderList = res['data']
-            } else {
-              this.$message.error('fail to load coders')
-              console.log(res['msg'])
-            }
+          const res = JSON.parse(response.bodyText)
+          console.log(res)
+          // eslint-disable-next-line eqeqeq
+          if (res.errorNum === 0) {
+            this.coderList = res['coder']
+          } else {
+            this.$message.error('fail to load coders')
+            console.log(res['msg'])
+          }
         })
     }
   }
