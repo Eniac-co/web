@@ -8,5 +8,15 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.10.2",
+    "deepmerge": "^4.2.2",
+    "fibers": "^4.0.2",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2"
+  },
+  "dependencies": {
+    "vuetify": "^2.2.4"
+  }
 }
