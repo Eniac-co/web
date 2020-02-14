@@ -228,7 +228,6 @@ h2.location {
 export default {
   name: "coder",
   data: () => ({
-    english: [],
     activeName: "story",
     dynamicTags: ["标签一", "标签二", "标签三"],
     inputVisible: false,
@@ -245,7 +244,7 @@ export default {
   }),
 
   mounted: function() {
-    this.showCoders();
+    // this.showCoders();
   },
   methods: {
     handleClose(tag) {

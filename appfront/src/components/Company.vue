@@ -5,19 +5,19 @@
         <h2
           class="location"
           align="left"
-        >Industry: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ category }}</h2>
+        >Industry: {{ category }}</h2>
         <h2
           class="location"
           align="left"
-        >Location:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beijing, China</h2>
+        >Location: Beijing, China</h2>
         <h2
           class="location"
           align="left"
-        >Founded Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017</h2>
+        >Founded Date: 2017</h2>
         <h2
           class="location"
           align="left"
-        >Company Size: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10-20 employees</h2>
+        >Company Size: 10-20 employees</h2>
         <h2 class="location" align="left">Last Funding Type: &nbsp;&nbsp;&nbsp;Series C</h2>
       </el-col>
       <el-col :span="8">
@@ -233,7 +233,6 @@ export default {
   name: "coder",
   data: () => ({
     category: "Health care, Apps",
-    english: [],
     activeName: "story",
     dynamicTags: ["标签一", "标签二", "标签三"],
     inputVisible: false,
