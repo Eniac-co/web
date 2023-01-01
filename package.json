@@ -10,11 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.10.2",
+    "@nuxtjs/vuetify": "^1.12.3",
     "deepmerge": "^4.2.2",
     "fibers": "^4.0.2",
     "sass": "^1.25.0",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^13.2.0"
   },
   "dependencies": {
     "vuetify": "^2.2.4"
